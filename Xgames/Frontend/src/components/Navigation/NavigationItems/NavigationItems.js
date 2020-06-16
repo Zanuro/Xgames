@@ -10,7 +10,7 @@ const navigationItems = () => (
     <ul className={classes.NavigationItems}>
         <NavigationItem link="/" active>Inicio</NavigationItem>
         <NavigationItem link="blog.html">Foro</NavigationItem>
-        <NavigationItem link="formulario.html">Añadir Juego</NavigationItem>
+        <NavigationItem link="/newgame">Añadir Juego</NavigationItem>
     <li className={classes.UserProfile}><NavigationBarMenu /></li>
     </ul>
 );

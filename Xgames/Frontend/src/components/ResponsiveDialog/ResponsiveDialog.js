@@ -21,6 +21,17 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(2),
     flex: 1,
   },
+  buttonCard: {
+    border: 'none',
+    boxShadow: 'none',
+    fontFamily: 'inherit',
+    backgroundColor: 'transparent',
+    color: '#341cac',
+    fontSize: '15px',
+    transition: '0.25s',
+    display: 'flex',
+    alignItems: 'flex-start'
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -41,14 +52,17 @@ export default function FullScreenDialog(props) {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        {props.title}
+      <Button className={classes.buttonCard} variant="outlined" color="primary" onClick={handleClickOpen}>
+        More Info
       </Button>
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
         <h1 align="center">{props.title}</h1>
         <img
           src={props.image}
           alt={props.title}
+          width="50%"
+          height="50%"
+          justify = "center"
         />
         <h1> Descripción</h1>
         {props.text}
