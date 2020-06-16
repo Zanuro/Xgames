@@ -7,7 +7,9 @@ import ResponsiveDialog from '../ResponsiveDialog/ResponsiveDialog';
 class GameCard extends Component {
     render() {
       return (
+        
         <article className={classes.gamecard}>
+          {console.log(this.props)}
           <CardHeader image={this.props.details.image}/>
           <CardBody title={this.props.details.title} text={this.props.details.text}/>
           <ResponsiveDialog title={this.props.details.title} image={this.props.details.image} text={this.props.details.text}/>

@@ -40,6 +40,14 @@ class App extends React.Component {
                                     <Route path="/register" component={CRegisterPage} />
                                     <Route path="/newgame"><NewGameView /></Route>
                                     <Route path="/search"><SearchView /></Route>
+                                    <Route path='/noticias' component={() => { 
+                                        window.location.href = 'https://vandal.elespanol.com/noticias/videojuegos'; 
+                                        return null;
+                                    }} />
+                                    <Route path='/foro' component={() => {
+                                        window.location.href = 'https://vandal.elespanol.com/foro/cgi-bin/foro.cgi';
+                                        return null;
+                                    }} />
                                     <Redirect from="*" to="/" />
                                 </Switch>
                             </Router>
