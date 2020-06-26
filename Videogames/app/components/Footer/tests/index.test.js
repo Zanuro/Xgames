@@ -1,17 +1,30 @@
-/* import React from 'react';
-import renderer from 'react-test-renderer';
-import { IntlProvider } from 'react-intl';
-import { Provider } from 'react-redux';
-import { browserHistory } from 'react-router-dom';
+import React from 'react';
+import { render } from 'react-testing-library';
 
 import Footer from '../index';
-*/
 
-import React from 'react';
-const greetme = "Hello!";
+const renderComponent = () =>
+  render(
+    <Footer></Footer>
+  );
 
-describe("Our first test!", () => {
-  it("Should say hello!", () => {
-    expect(greetme).toBe("Hello!");
-  });
+describe('<Footer />', () => {
+    it('should render an <Wrapper> tag', () => {
+      const { container } = renderComponent();
+      expect(container.querySelector('Wrapper')).not.toBeNull();
+    });
+    it('should render an <CSSBaseLine> tag', () => {
+        const { container } = renderComponent();
+        expect(container.querySelector('CSSBaseLine')).not.toBeNull();
+    });
+    it('should render an <Typography> tag', () => {
+        const { container } = renderComponent();
+        expect(container.querySelector('Typography')).not.toBeNull();
+    });
+    it('should render an <Grid> tag', () => {
+        const { container } = renderComponent();
+        expect(container.querySelector('Grid')).not.toBeNull();
+    });
+
 });
+
