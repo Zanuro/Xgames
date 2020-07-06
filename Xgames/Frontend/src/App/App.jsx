@@ -32,15 +32,15 @@ class App extends React.Component {
                         {alert.message &&
                             <div className={`alert ${alert.type}`}>{alert.message}</div>
                         }
-                            <Router history={history}>                                                  
+                            <Router history={history}>
                                 <Switch>
                                     <Route exact path="/"> <HomeView/></Route>
                                     <Route path="/login" component={CLoginPage} />
                                     <Route path="/register" component={CRegisterPage} />
                                     <Route path="/newgame"><NewGameView /></Route>
                                     <Route path="/search"><SearchView /></Route>
-                                    <Route path='/noticias' component={() => { 
-                                        window.location.href = 'https://vandal.elespanol.com/noticias/videojuegos'; 
+                                    <Route path='/noticias' component={() => {
+                                        window.location.href = 'https://vandal.elespanol.com/noticias/videojuegos';
                                         return null;
                                     }} />
                                     <Route path='/foro' component={() => {
@@ -67,4 +67,5 @@ const actionCreators = {
 };
 
 const connectedApp = connect(mapState, actionCreators)(App);
-export { connectedApp as App };
+// export { connectedApp as App };
+export default App;
