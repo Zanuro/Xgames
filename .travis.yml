@@ -9,7 +9,7 @@ script:
 - npm run build
 # - sonar-scanner -X
 before_install:
-- cd Xgames
+- cd Xgames/Fronted/
 - npm install
 notifications:
   slack: sytw:zOwATE9j5xq2yo6Jqb8y6YtR#2019-e02
