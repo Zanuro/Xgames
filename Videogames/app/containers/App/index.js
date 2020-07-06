@@ -13,7 +13,6 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import VGDetail from 'containers/VideoGameDetail/Loadable';
-import Iniciar from 'containers/IniciarSesion/Loadable'
 
 import GlobalStyle from '../../global-styles';
 
@@ -23,7 +22,6 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/detail" component={VGDetail} />
-        <Route exact path="/iniciar" component={Iniciar} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

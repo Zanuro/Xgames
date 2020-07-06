@@ -1,6 +1,6 @@
-/* Iniciar Sesion
+/*
+ * Iniciar sesion
  *
- * This is the first thing users see of our App, at the '/' route
  *
  */
 
@@ -9,7 +9,6 @@ import React from 'react';
 // import messages from './messages';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-
 
 export default function HomePage() {
   return (

@@ -10,7 +10,7 @@ script:
 # - sonar-scanner -X
 before_install:
 - cd Videogames
-# - npm install
+- npm install
 notifications:
   slack: sytw:zOwATE9j5xq2yo6Jqb8y6YtR#2019-e02
   email:
