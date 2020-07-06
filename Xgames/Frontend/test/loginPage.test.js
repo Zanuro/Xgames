@@ -16,7 +16,7 @@ describe('Test case for login component', () => {
     });
 
     it("username label", () => {
-        const wrapper = shallow(<LoginPage/>);
+        // const wrapper = shallow(<LoginPage/>);
         const forms = wrapper.find('label[htmlFor="username"]');
         expect(forms.length).to.equal(1);
     });
@@ -38,16 +38,16 @@ describe('Test case for login component', () => {
         wrapper.find('input[type="password"]').simulate('change',{target: {name: 'password', value: 'ABa12345'}});
         expect(wrapper.state('password')).to.equal('ABa12345');
     })
-    
+
     it('test username login in(correct data)', () => {
 
         const wrapper = shallow(<LoginPage/>);
         wrapper.find('input[type="text"]').simulate('change', {target: {name: 'username', value: 'vladco'}});
         wrapper.find('input[type="password"]').simulate('change', {target: {name: 'password', value: 'ABa12345'}});
-    
+
         wrapper.find('form[name="form"]').simulate('submit',{
             preventDefault: () => {}
-        });        
+        });
         expect(wrapper.state('submitted')).to.equal(true);
         expect(wrapper.state('loggedIn')).to.equal(true);
     })
