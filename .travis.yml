@@ -6,7 +6,7 @@ node_js:
 - lts/*
 script:
 - npm test
-- npm run build
+# - npm run build
 # - sonar-scanner -X
 before_install:
 - cd Xgames/Frontend/
