@@ -13,6 +13,7 @@ const NavigationBarMenu: React.FC = () => {
   var loggedIn = false;
   if(userLogged !== null){
       loggedIn = true;
+      var parseduserData = JSON.parse(userLogged);
   }
   const userMenu = (
     <Menu
@@ -33,7 +34,7 @@ const NavigationBarMenu: React.FC = () => {
     <MenuItem onClick={() => history.push("/register")}>
       {"Registrarse"}
     </MenuItem>
-        </div> : <MenuItem onClick={() => history.push("/")}>
+        </div> : <MenuItem onClick={ (event) => { history.push("/"); localStorage.clear()}}>
         {"Salir"}
       </MenuItem>}
       
